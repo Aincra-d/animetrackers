@@ -1,0 +1,74 @@
+{
+  "name": "anime",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "animated-vue": "^0.5.3",
+    "apexcharts": "^3.16.0",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.5.0",
+    "chart.js": "^2.9.3",
+    "cheerio": "^1.0.0-rc.3",
+    "core-js": "^3.6.4",
+    "dayjs": "^1.8.23",
+    "keen-ui": "^1.2.1",
+    "mal-scraper": "^2.6.8",
+    "mysql": "^2.18.1",
+    "php-server": "^0.2.1",
+    "uuid": "^3.4.0",
+    "vue": "^2.6.11",
+    "vue-chartjs": "^3.5.0",
+    "vue-chartkick": "^0.6.0",
+    "vue-css-donut-chart": "^1.2.0",
+    "vue-head": "^2.2.0",
+    "vue-js-modal": "^1.3.33",
+    "vue-lazyload": "^1.3.3",
+    "vue-navigation-bar": "^2.0.0",
+    "vue-notification": "^1.3.20",
+    "vue-progressbar": "^0.7.5",
+    "vue-router": "^3.1.5",
+    "vue-select": "^3.10.0",
+    "vue-server-renderer": "^2.6.11",
+    "vue-spinner": "^1.0.3",
+    "vue-sticky-directive": "0.0.10",
+    "vue-top-progress": "^0.7.0",
+    "vue-uuid": "^2.0.2",
+    "vue2-transitions": "^0.3.0",
+    "vuedraggable": "^2.24.1",
+    "vuesax": "^4.0.1-alpha.25"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

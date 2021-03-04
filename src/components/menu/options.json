@@ -1,0 +1,139 @@
+[{
+            "elementId": "main-navbar",
+            "isUsingVueRouter": true,
+            "mobileBreakpoint": 992,
+            "showBrandImageInMobilePopup": true,
+            "ariaLabelMainNav": "Main Navigation",
+            "tooltipAnimationType": "shift-away",
+            "menuOptionsLeft": [
+              {
+                "type": "link",
+                "text": "Home",
+                "path": "/"
+              },
+              {
+                "type": "link",
+                "text": "Anime",
+                "subMenuOptions": [
+                  {
+                    "type": "link",
+                    "text": "Top rated",
+                    "path": "/top/anime/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Most popular",
+                    "path": "/top/anime/bypopularity/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top airing",
+                    "path": "/top/anime/airing/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top upcoming",
+                    "path": "/top/anime/upcoming/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Most favourited",
+                    "path": "/top/anime/favorite/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top TV",
+                    "path": "/top/anime/tv/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top movie",
+                    "path": "/top/anime/movie/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top OVA",
+                    "path": "/top/anime/ova/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top special",
+                    "path": "/top/anime/special/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Genre search",
+                    "path": "/top/anime/genre/1/Action/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Studio search",
+                    "path": "/top/anime/studio/1/Studio-Pierrot/1"
+                  },
+                ]
+              },
+              {
+                "type": "link",
+                "text": "Manga",
+                "subMenuOptions": [
+                  {
+                    "type": "link",
+                    "text": "Top rated",
+                    "path": "/top/manga/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Most popular",
+                    "path": "/top/manga/bypopularity/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top novels",
+                    "path": "/top/manga/novels/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top doujin",
+                    "path": "/top/manga/doujin/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top manhwa",
+                    "path": "/top/manga/manhwa/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top manhua",
+                    "path": "/top/manga/manhua/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Top oneshots",
+                    "path": "/top/manga/oneshots/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Most favourited",
+                    "path": "/top/manga/favorite/1"
+                  },
+                  {
+                    "type": "link",
+                    "text": "Genre search",
+                    "path": "/top/manga/genre/1/Action/1"
+                  }
+                ]
+              },
+              {
+                "type": "link",
+                "text": "Characters",
+                "path": "/top/characters/1",
+                "iconRight": "<i class='fa fa-angle-right text-dark fa-fw'></i>",
+              },
+              {
+                "type": "link",
+                "text": "Seasonal",
+                "path": "/season/2020/winter",
+                "iconRight": "<i class='fa fa-angle-right text-dark fa-fw'></i>",
+              },
+            ]
+          }]

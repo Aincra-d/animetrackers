@@ -1,0 +1,108 @@
+<template>
+	<div>
+		<div
+        class="d-inline-block"
+        v-if="data.currentPage > 1">
+			<router-link
+            class="d-inline-block"
+            v-if="data.currentPage > 3"
+            :to="{
+                name: $route.name,
+                params: { page: 1, type: $route.params.type },
+                query: $route.query.page ? route(1) : ''
+            }">
+				<pageButton>
+					<i class="fas fa-angle-double-left"></i>
+				</pageButton>
+			</router-link>
+
+			<router-link
+            class="d-inline-block"
+            v-if="data.currentPage > 1"
+            :to="{
+                name: $route.name,
+                params: { page: parseInt($route.params.page)-1, type: $route.params.type },
+                query: $route.query.page ? route(parseInt($route.query.page)-1) : ''
+            }">
+				<pageButton>
+					<i class="fas fa-angle-left"></i>
+				</pageButton>
+			</router-link>
+
+			<router-link
+            class="d-inline-block"
+            v-if="data.currentPage > 2"
+            :to="{
+                name: $route.name,
+                params: { page: parseInt($route.params.page)-2, type: $route.params.type },
+                query: $route.query.page ? route(parseInt($route.query.page)-2) : ''
+            }">
+				<pageButton>
+					{{data.pages.prev2}}
+				</pageButton>
+			</router-link>
+
+			<router-link
+            class="d-inline-block"
+            v-if="data.currentPage > 1"
+            :to="{
+                name: $route.name,
+                params: { page: parseInt($route.params.page)-1, type: $route.params.type },
+                query: $route.query.page ? route(parseInt($route.query.page)-1) : ''
+            }">
+				<pageButton>
+					{{(data.pages.prev)}}
+				</pageButton>
+			</router-link>
+		</div>
+	</div>
+</template>
+
+<script>
+	import pageButton from '@/components/pageButton.vue'
+	export default{
+		name: 'prevButtons',
+		props: ["data"],
+		components: {
+			pageButton
+		},
+		methods: {
+            route(page){
+                let queries;
+                if(this.$route.query.board){
+                    queries={
+                        board: this.$route.query.board,
+                        page: page
+                    }
+                }
+                
+                if(!this.$route.query.board){
+                    queries={
+                        topic: this.$route.query.topic,
+                        page: page
+                    }
+                }
+
+                if(this.$route.query.type){
+                    if(this.$route.query.subtype){
+                        queries={
+                            type: this.$route.query.type,
+                            id: this.$route.query.id,
+                            subtype: this.$route.query.subtype,
+                            page: page
+                        }
+                    }
+                    else{
+                        queries={
+                            type: this.$route.query.type,
+                            id: this.$route.query.id,
+                            page: page
+                        }
+                    }
+                    
+                }
+                return queries;
+            }
+        }
+	}
+</script>
