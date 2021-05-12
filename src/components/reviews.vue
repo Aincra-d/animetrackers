@@ -78,17 +78,17 @@
                 let self=this;
                 let reviews=[];
 
-                axios.get("https://api.jikan.moe/v4-alpha/reviews/"+self.$route.params.type+"?page="+self.$route.params.page)
+                axios.get("https://api.jikan.moe/v4/reviews/"+self.$route.params.type+"?page="+self.$route.params.page)
                 .then(response =>{
                     console.log(response.data);
 
                     for(let i=0; i<response.data.data.length; i++){
                         reviews.push({
-                            id: response.data.data[i][this.$route.params.type].mal_id,
+                            id: response.data.data[i].entry.mal_id,
 
-                            title: response.data.data[i][this.$route.params.type].title,
+                            title: response.data.data[i].entry.title,
 
-                            cover: response.data.data[i][this.$route.params.type].images.jpg.image_url,
+                            cover: response.data.data[i].entry.images.jpg.image_url,
 
                             votes: response.data.data[i].votes,
                             

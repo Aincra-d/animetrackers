@@ -77,20 +77,20 @@
             getRecommendations(){
                 let self=this;
                 let recommendations=[];
-                axios.get("https://api.jikan.moe/v4-alpha/recommendations/"+self.$route.params.type+"?page="+(parseInt(self.$route.params.page)-1))
+                axios.get("https://api.jikan.moe/v4/recommendations/"+self.$route.params.type+"?page="+(parseInt(self.$route.params.page)))
                 .then(response =>{
                     console.log(response.data);
                     let rec=response.data.data;
 
                     for(let i=0; i<rec.length; i++){
                         recommendations.push({
-                            title_id: rec[i].recommendations[0].mal_id,
-                            title_name: rec[i].recommendations[0].title,
-                            title_cover: rec[i].recommendations[0].images.jpg.image_url,
-                            rec_id: rec[i].recommendations[1].mal_id,
-                            rec_name: rec[i].recommendations[1].title,
-                            rec_cover: rec[i].recommendations[1].images.jpg.image_url,
-                            user: rec[i].recommender.username,
+                            title_id: rec[i].entry[0].mal_id,
+                            title_name: rec[i].entry[0].title,
+                            title_cover: rec[i].entry[0].images.jpg.image_url,
+                            rec_id: rec[i].entry[1].mal_id,
+                            rec_name: rec[i].entry[1].title,
+                            rec_cover: rec[i].entry[1].images.jpg.image_url,
+                            user: rec[i].user.username,
                             text: rec[i].content,
                             date: dayjs.utc(
                                 rec[i].date.substring(0,10)

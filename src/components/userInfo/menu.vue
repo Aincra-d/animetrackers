@@ -51,7 +51,7 @@
                 </li>
 
 
-                <li class="d-inline mx-2">
+                <li class="d-inline mx-2" v-if="!$route.params.username">
                     <router-link class="font-weight-bold"
                     :class="($route.name=='history' || $route.name=='local_history') ? 'text-primary' : 'text-light'"
                     :to="($route.params.username ? '/user/'+$route.params.username : '/local')+'/history'+(!$route.params.username ? '/1' : '')">
